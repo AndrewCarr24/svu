@@ -1,8 +1,28 @@
+
 import streamlit as st
 import pandas as pd
 import requests
 from PIL import Image
 from io import BytesIO
+
+# Set wider sidebar and improve button styling
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        min-width: 300px;
+        max-width: 400px;
+        width: 300px;
+    }
+    [data-testid="stSidebar"] button {
+        min-width: 36px;
+        text-align: center;
+        padding: 0.1rem 0.5rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 # Load data
